@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Penumathsa Sai Manikanta Varma | Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #000428, #004e92);
+      color: white;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: black;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      border-bottom: 4px solid #004e92;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1em;
+      font-weight: 600;
+    }
+
+    nav {
+      background: #001f3f;
+      padding: 12px 0;
+      text-align: center;
+      border-bottom: 2px solid #0074D9;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1em;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00CFFF;
+    }
+
+    main {
+      flex-grow: 1;
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    section:hover {
+      transform: scale(1.02);
+    }
+
+    h2 {
+      font-size: 1.8em;
+      color: #00CFFF;
+      margin-bottom: 20px;
+      border-bottom: 3px solid #00CFFF;
+      padding-bottom: 5px;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-bottom: 20px;
+      list-style-type: disc;
+      font-weight: 600;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    .education p {
+      margin-bottom: 15px;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .social-icons a {
+      margin: 10px;
+      color: white;
+      font-size: 24px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+
+    .slideshow {
+      display: flex;
+      overflow-x: auto;
+      gap: 16px;
+      padding-top: 10px;
+      scroll-behavior: smooth;
+    }
+
+    .slideshow::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .slideshow::-webkit-scrollbar-thumb {
+      background-color: #00CFFF;
+      border-radius: 10px;
+    }
+
+    .slideshow .certificate {
+      flex: 0 0 auto;
+      width: 150px;
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .slideshow .certificate:hover {
+      transform: scale(1.05);
+    }
+
+    .slideshow img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
+    .slideshow p {
+      margin-top: 8px;
+      font-weight: bold;
+      color: #fff;
+      font-size: 0.9em;
+    }
+
+    footer {
+      background: #001f3f;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      border-top: 3px solid #004e92;
+      margin-top: auto;
+    }
+
+    a {
+      color: #00CFFF;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2em;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 10px 8px;
+        font-size: 0.95em;
+      }
+
+      .slideshow .certificate {
+        width: 130px;
+      }
+
+      section {
+        padding: 20px;
+        margin: 20px 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.6em;
+      }
+
+      header p {
+        font-size: 1em;
+      }
+
+      nav a {
+        margin: 8px 5px;
+        font-size: 0.85em;
+      }
+
+      .slideshow .certificate {
+        width: 110px;
+      }
+
+      h2 {
+        font-size: 1.5em;
+      }
+
+      main {
+        padding: 0 10px;
+      }
+
+      section {
+        margin: 15px 5px;
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Penumathsa Sai Manikanta Varma</h1>
+    <p>Aspiring Software Engineer | Passionate About AI & Web Development</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I am a B.Tech student specializing in Computer Science Engineering with strong expertise in frontend development. I have hands-on experience with HTML, CSS, Bootstrap, and JavaScript, and I enjoy creating responsive and user-friendly web interfaces. Currently, I am expanding my knowledge into backend technologies and full-stack development to become a well-rounded software developer.</p>
+    </section>
+
+    <section id="education" class="education">
+      <h2>Education</h2>
+      <p><strong>B.Tech in Computer Science Engineering</strong><br>Vel Tech Rangarajan Dr. Sagunthala R&D Institute (CGPA: 8.3)</p>
+      <p><strong>Senior Secondary</strong><br>Sri Chaitanya Junior College (77%)</p>
+      <p><strong>Secondary Education</strong><br>Sri Chaitanya High School (96%)</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Blind Guidance Glasses</strong> – Ultrasonic sensor-based assistive technology for the visually impaired.</li>
+        <li><strong>Student Event Dashboard</strong> – A web-based platform for event tracking using PHP & MySQL. <a href="https://manikantavarma2889.github.io/StudentEventDashboard.github.io/" target="_blank">View Project</a></li>
+        <li><strong>Proximity Management using AI</strong> – Real-time monitoring system using YOLOv3 and OpenCV to detect social distancing violations in video streams. <a href="https://github.com/manikantavarma2889/Social-Distancing-Detection-" target="_blank">View on GitHub</a></li>
+        <li><strong>Hand Fracture Detection Using Deep Learning</strong> – Developed a CNN-based model to automatically detect various types of bone fractures from X-ray images, including oblique, spiral, and transverse fractures. <a href="https://github.com/manikantavarma2889/Bone-Fracture-Detection" target="_blank">View Project</a></li>
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>Programming: C, Java, HTML, CSS, JavaScript</li>
+        <li>Database: MySQL</li>
+        <li>Version Control: Git, GitHub</li>
+        <li>Microsoft Office: PowerPoint, Excel, MS Word</li>
+        <li>Soft Skills: Teamwork, Adaptability, Active Listening</li>
+      </ul>
+    </section>
+
+    <section id="certificates">
+      <h2>Certificates</h2>
+      <div class="slideshow">
+        <div class="certificate">
+          <img src="Java Script.png" alt="JavaScriptCertificate">
+          <p>JavaScript – PrepInsta</p>
+        </div>
+        <div class="certificate">
+          <img src="Git.png" alt="GIT Certificate">
+          <p>Git – PrepInsta</p>
+        </div>
+        <div class="certificate">
+          <img src="Java.png" alt="JavaCertificate">
+          <p>Java Fundamentals – Infosys Springboard</p>
+        </div>
+        <div class="certificate">
+          <img src="Bash Shell.png" alt="Bash Shell">
+          <p>Bash Shell Programming – Infosys Springboard</p>
+        </div>
+        <div class="certificate">
+          <img src="MLT.png" alt="MLT">
+          <p>Machine Learning Techniques – Infosys Springboard</p>
+        </div>
+        <div class="certificate">
+          <img src="Tantaraz.png" alt="First-Prize">
+          <p>Tantaraz – Vel-tech</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:saimanikantavarma04@gmail.com">saimanikantavarma04@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/sai-manikanta-varma-41534b201/" target="_blank">linkedin.com/in/sai-manikanta-varma</a></p>
+      <p>GitHub: <a href="https://github.com/manikantavarma2889" target="_blank">github.com/manikantavarma2889</a></p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/sai-manikanta-varma-41534b201/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/manikantavarma2889" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="mailto:saimanikantavarma04@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Penumathsa Sai Manikanta Varma. All rights reserved.
+  </footer>
+
+  <!-- Font Awesome Icons -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
